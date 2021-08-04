@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Products</title>
+    <link rel="stylesheet" href="./editProducts.css">
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <div class="title">
+                <p>Belanja</p>
+            </div>
+            
+            <div class="search-container">
+                <div class="search">
+                    <form id="searchForm">
+                        <input type="text" name="searchInput" id="searchInput">
+                        <button type="submit" name="searchButton" id="searchButton"><img src="./assets/search/1x/outline_search_white_24dp.png" alt="searchIcon"></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="menu">
+                <a href="#"><img src="./assets/person/2x/outline_person_outline_white_24dp.png" alt="Account"></a>
+                <a href="#"><img src="./assets/logout/2x/outline_logout_white_24dp.png" alt="logout"></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+
+        </section>
+        <section class="productCard">
+            <div class="cardContainer">
+                <!-- <div class="card">
+                    <div>
+                        <img src="./fans.jpeg" alt="sepatu fans" width="150" height="150">
+                    </div>
+                    <div class="detailProduct">
+                        <p>Sepatu fans biasa saja</p>
+                        <p>Harga Produk : 10000</p>
+                        <p>Stock : 10</p>
+                    </div>
+                    <div class="icon">
+                        <div class="editButton">
+                            <button type="submit" id="buttonEdit"><img src="./assets/edit/1x/outline_edit_white_24dp.png" alt="editicon"></button>
+                        </div>
+                        <div class="deleteButton">
+                            <button type="submit" id="buttonDelete"><img src="./assets/delete/1x/outline_delete_white_24dp.png" alt="deleteicon"></button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        <section>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                    <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="isi">
+
+                    </div>
+                    </div>
+                </div>
+            <!-- <div class="modalContainer"> -->
+                <!-- <div class="modal-content"> -->
+                    <!-- <span class="close">&times;</span> -->
+                    <!-- <div class="isi">
+                        <div class="form-container"> 
+                        </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        <section>
+            <div class="buttonPagination">
+                <button type="submit" id="back" name="back"> Back</button>
+                <button type="submit" id="next" name="next">Next >></button>
+            </div>
+        </section>
+    </main>
+    <script src="./editProducts.js"></script>
+</body>
+</html>

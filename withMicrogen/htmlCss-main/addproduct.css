@@ -1,0 +1,165 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* style header */
+.topnav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to right, #e4755a, #db357d);
+}
+
+.title{
+    font-size: 30px;
+    margin-top: 2px;
+    color: cornsilk;
+}
+.title a{
+    text-decoration: none;
+    color: cornsilk;
+}
+.title p{
+    margin-top: 20px;
+}
+.topnav input[type=text] {
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 300px;
+}
+
+.search {
+    margin-top: 13px;
+    float: right;
+    justify-content: space-between;
+}
+
+.search-container {
+    flex-basis: 400px;
+}
+
+.search button {
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: rgb(6, 160, 65);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.search button:hover{
+    background: rgb(4, 150, 60);
+}
+.menu {
+    float: left;
+}
+
+.menu a img{
+    float: left;
+    margin-left: 30px;
+    margin-top: 15px;
+    width: 40px;
+}
+
+/* end of style header */
+
+
+/* style input data container */
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.formContainer{
+    padding: 20px;
+    justify-items: center;
+    width: 30%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1%;
+}
+
+.formContainer:hover{
+    padding: 20px;
+    justify-items: center;
+    width: 30%;
+    background-color: rgb(231, 231, 231);
+    border-radius: 1%;
+}
+/* style input data  */
+#createProduct{
+    align-content: center;
+    margin-left: 20px;
+}
+#createProduct input[type=text] {
+    margin-top: 10px;
+    padding: 10px;
+    width: 90%;
+}
+#createProduct input[type=file] {
+    margin-top: 10px;
+    width: 90%;
+}
+#createProduct input[type=submit] {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: salmon;
+    border: none;
+}

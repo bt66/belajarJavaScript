@@ -1,0 +1,775 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* style header */
+.topnav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to right, #e4755a, #db357d);
+}
+
+.title{
+    font-size: 30px;
+    margin-top: 2px;
+    color: cornsilk;
+}
+
+.title p{
+    margin-top: 20px;
+}
+
+.search-container {
+    flex-basis: 400px;
+}
+.search {
+    margin-top: 13px;
+    float: right;
+    justify-content: space-between;
+}
+
+.topnav input[type=text] {
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 300px;
+}
+
+.search button {
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: rgb(6, 160, 65);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.search button:hover{
+    background: rgb(4, 150, 60);
+}
+.menu {
+    float: left;
+}
+
+.menu a img{
+    float: left;
+    margin-left: 30px;
+    margin-top: 15px;
+    width: 40px;
+}
+
+/* end of style header */
+
+/* body style */
+
+/*card */
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(233, 233, 233);
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 40%;
+    border-radius: 10px;
+}
+.card:hover {
+    background-color: rgb(190, 190, 190);
+}
+.detailProduct p{
+    padding: 10px;
+    text-overflow: ellipsis;
+    max-width: 20ch;
+}
+.icon {
+    display: flex;
+    margin-left: 20%;
+}
+.editButton {
+    margin-top: 50px;
+    margin-right: 5px;
+}
+.deleteButton {
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 50px;
+}
+.editButton button{
+    background: rgb(86, 19, 194);
+    border: none;
+    padding: 10px;
+}
+.editButton button:hover {
+    background: rgb(68, 15, 153);
+}
+.deleteButton button{
+    background: rgb(224, 2, 2);
+    border: none;
+    padding: 10px;
+}
+.deleteButton button:hover{
+    background: rgb(165, 2, 2);
+}
+
+/* sytle modal content */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+/* .modalContainer {
+    position: absolute;
+    margin-top: -1500px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: none;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    width: 80%;
+    margin: auto;
+    background-color: cornsilk;
+}
+.close {
+    padding: 10px;
+    color: rgb(162, 0, 255);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: row;
+} */
+
+/* update form on modal */
+
+.detail {
+    font-weight: bold;
+}
+.detail span {
+    font-weight: normal;
+}
+.isi p{
+    margin-top: 5px;
+}
+.Judul {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.tumbnail {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#updateForm {
+    margin-top: 15px;
+}
+
+#updateForm input[type=text] {
+    padding: 5px;
+    margin-top: 5px;
+    width: 97%;
+}
+
+#updateForm input[type=file] {
+    padding: 5px;
+    width: 80%;
+    margin-top: 5px;
+}
+
+#updateForm textarea {
+    width: 98%;
+    padding: 5px;
+}
+
+input[type=submit] {
+    border: none;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #2bcc6e;
+    color: #fefefe;
+    width: 30%;
+}
+
+input[type=submit]:hover {
+    background: #168b47;
+}
+
+
+
+
+/* style button pagination */
+.buttonPagination {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.buttonPagination button {
+    margin-left: 10px;
+    padding: 10px;
+    border: none;
+    background: #db357d;
+    color: white;
+}
+
+
+
+
+@media only screen and (max-width: 585px) {
+    .topnav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    header {
+        width: 100%;
+        height: 80px;
+        background: linear-gradient(to right, #e4755a, #db357d);
+    }
+    
+    .title{
+        font-size: 30px;
+        margin-top: 2px;
+        color: cornsilk;
+    }
+    
+    .title p{
+        margin-top: 20px;
+    }
+    
+    .search-container {
+        flex-basis: 280px;
+        align-items: center;
+        
+    }
+    .search {
+        margin-top: 13px;
+        /* float: right; */
+        align-items: center;
+        align-self: center;
+        justify-content: space-between;
+    }
+    
+    .topnav input[type=text] {
+        padding: 10px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        width: 200px;
+    }
+    
+    .search button {
+        float: right;
+        width: 40px;
+        height: 40px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: rgb(6, 160, 65);
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .search button:hover{
+        background: rgb(4, 150, 60);
+    }
+    .menu {
+        float: left;
+    }
+    
+    .menu a img{
+        float: left;
+        margin-left: 30px;
+        margin-top: 15px;
+        width: 40px;
+    }
+}
+
+@media only screen and (max-width: 585px) {
+    .topnav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    header {
+        width: 100%;
+        height: 80px;
+        background: linear-gradient(to right, #e4755a, #db357d);
+    }
+    
+    .title{
+        font-size: 30px;
+        margin-top: 2px;
+        color: cornsilk;
+    }
+    
+    .title p{
+        margin-top: 20px;
+    }
+    
+    .search-container {
+        flex-basis: 260px;
+        align-items: center;
+        
+    }
+    .search {
+        margin-top: 13px;
+        /* float: right; */
+        align-items: center;
+        align-self: center;
+        justify-content: space-between;
+    }
+    
+    .topnav input[type=text] {
+        padding: 10px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        width: 180px;
+    }
+    
+    .search button {
+        float: right;
+        width: 40px;
+        height: 40px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: rgb(6, 160, 65);
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .search button:hover{
+        background: rgb(4, 150, 60);
+    }
+    .menu {
+        float: left;
+    }
+    
+    .menu a img{
+        float: left;
+        margin-left: 30px;
+        margin-top: 25px;
+        width: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 488px) {
+    .topnav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    header {
+        width: 100%;
+        height: 80px;
+        background: linear-gradient(to right, #e4755a, #db357d);
+    }
+    
+    .title{
+        font-size: 30px;
+        margin-top: 2px;
+        color: cornsilk;
+    }
+    
+    .title p{
+        margin-top: 20px;
+    }
+    
+    .search-container {
+        flex-basis: 240px;
+        align-items: center;
+        
+    }
+    .search {
+        margin-top: 13px;
+        /* float: right; */
+        align-items: center;
+        align-self: center;
+        justify-content: space-between;
+    }
+    
+    .topnav input[type=text] {
+        padding: 10px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        width: 130px;
+    }
+    
+    .search button {
+        float: right;
+        width: 40px;
+        height: 40px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: rgb(6, 160, 65);
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .search button:hover{
+        background: rgb(4, 150, 60);
+    }
+    .menu {
+        float: left;
+    }
+    
+    .menu a img{
+        float: left;
+        margin-left: 30px;
+        margin-top: 25px;
+        width: 30px;
+    }
+}
+
+@media only screen and (max-width: 468px) {
+    .topnav {
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap;
+        justify-content: space-around; */
+    }
+    
+    header {
+        width: 100%;
+        height: 200px;
+        background: linear-gradient(to right, #e4755a, #db357d);
+    }
+    
+    .title{
+        font-size: 30px;
+        margin-top: 2px;
+        color: cornsilk;
+    }
+    
+    .title p{
+        margin-top: 20px;
+    }
+    
+    .search-container {
+        flex-basis: 150px;
+        /* align-items: center; */
+        
+    }
+    .search {
+        margin-top: 13px;
+        float: left;
+        /* align-items: center;
+        align-self: center; */
+        /* justify-content: space-between; */
+    }
+    
+    .topnav input[type=text] {
+        padding: 10px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        width: 70px;
+    }
+    
+    .search button {
+        float: right;
+        width: 40px;
+        height: 40px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: rgb(6, 160, 65);
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .search button:hover{
+        background: rgb(4, 150, 60);
+    }
+    .menu {
+        float: left;
+    }
+    
+    .menu a img{
+        float: left;
+        margin-left: 30px;
+        margin-top: 25px;
+        width: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media only screen and (max-width: 584px) {
+    header {
+        width: 100%;
+        height: 300px;
+        background: linear-gradient(to right, #e4755a, #db357d);
+    }
+    .topnav input[type=text] {
+        padding: 10px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        width: 200px;
+    }
+    .topnav {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        /* flex-wrap: wrap; */
+        /* justify-content: space-around;  */
+    /* }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media only screen and (max-width: 414px) {
+    header {
+        width: 100%;
+        height: 190px;
+        background: linear-gradient(to right, #e4755a, #db357d);
+    }
+}
+@media only screen and (max-width: 375px) {
+    .topnav input[type=text] {
+        padding: 10px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        width: 280px;
+    }
+    .topnav input[type=text] {
+        padding: 10px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        width: 200px;
+    }
+    
+    .search {
+        margin-top: 13px;
+        float: right;
+        justify-content: space-between;
+    }
+    
+    .search-container {
+        flex-basis: 200px;
+        align-self: center;
+    }
+    
+    .search button {
+        float: right;
+        width: 40px;
+        height: 40px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: rgb(6, 160, 65);
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .topnav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    header {
+        width: 100%;
+        height: 190px;
+        background: linear-gradient(to right, #e4755a, #db357d);
+    }
+    .topnav input[type=text] {
+        padding: 10px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        width: 200px;
+    }
+    
+    .search {
+        margin-top: 13px;
+        float: right;
+        justify-content: space-between;
+    }
+    
+    .search-container {
+        flex-basis: 400px;
+        align-items: center;
+    }
+    
+    .search button {
+        float: right;
+        width: 40px;
+        height: 40px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: rgb(6, 160, 65);
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    }
+}  */

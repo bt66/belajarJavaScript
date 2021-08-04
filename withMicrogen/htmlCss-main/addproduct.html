@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./addproduct.css">
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <div class="title">
+                <a href="./index.html"><p>Belanja</p></a>
+            </div>
+            
+            <div class="search-container">
+                <div class="search">
+                    <form>
+                        <input type="text" name="search" id="search">
+                        <button type="submit"><img src="./assets/search/1x/outline_search_white_24dp.png" alt="searchIcon"></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="menu">
+                <a href="#"><img src="./assets/person/2x/outline_person_outline_white_24dp.png" alt="Account"></a>
+                <a href="#"><img src="./assets/logout/2x/outline_logout_white_24dp.png" alt="logout"></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="card">
+            <div class="formContainer">
+                <form id="createProduct" action="./editProducts.html" method="POST">
+                    <label for="name">Name : </label>
+                    <br>
+                    <input type="text" name="name" id="name" placeholder="Name">
+                    <br>
+                    <label for="image">Image : </label>
+                    <br>
+                    <input type="file" name="image" id="image">
+                    <br>
+                    <label for="image">Image : </label>
+                    <br>
+                    <input type="text" name="imageurl" id="imageurl">
+                    <br>
+                    <label for="harga">Harga : </label>
+                    <br>
+                    <input type="text" name="harga" id="harga">
+                    <br>
+                    <label for="stock">Stock : </label>
+                    <br>
+                    <input type="text" name="stock" id="stock">
+                    <br>
+                    <label for="description">Description : </label>
+                    <br>
+                    <input type="text" name="description" id="description">
+                    <br>
+                    <input type="submit" name="Update" id="update" value="Update">
+                </form>
+            </div>
+        </div>
+        
+    </main>
+    <script src="./addproduct.js"></script>
+</body>
+</html>
